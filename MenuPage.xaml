@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatFlow.MenuPage"
+             Title="MenuPage"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{DynamicResource DarkTheme_BackgroundColor}"
+             >
+
+    <VerticalStackLayout VerticalOptions="StartAndExpand" 
+                         HorizontalOptions="Center"
+                         Margin="0,50,0,0"
+                         
+                         >
+
+        <Label Text="What do you want to do?"
+               TextColor="{DynamicResource DarkTheme_BorderAndBoxesColor}"
+               FontFamily="CascadiaCode"
+               FontSize="16"
+               >
+
+        </Label>
+
+        <VerticalStackLayout Margin="0,20,0,0" Spacing="30">
+
+            <Button
+                HorizontalOptions="StartAndExpand"
+            Margin="25,0,0,0"
+                WidthRequest="150"
+                BackgroundColor="{DynamicResource DarkTheme_BorderAndBoxesColor}"
+                FontFamily="CascadiaCode"
+                FontSize="14"
+                Text="New chat"
+                TextColor="{DynamicResource DarkTheme_PrimaryColor}"
+                Clicked="OpenChat_Clicked"
+                >
+
+            </Button>
+
+            <Button
+                HorizontalOptions="StartAndExpand"
+            Margin="25,0,0,0"
+                WidthRequest="150"
+                BackgroundColor="{DynamicResource DarkTheme_BorderAndBoxesColor}"
+                FontFamily="CascadiaCode"
+                FontSize="14"
+                Text="Open history"
+                TextColor="{DynamicResource DarkTheme_PrimaryColor}"
+                Clicked="OpenHistory_Clicked"
+                >
+
+            </Button>
+
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>

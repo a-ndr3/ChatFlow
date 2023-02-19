@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Dark Theme -->
+    <Color x:Key="DarkTheme_PrimaryColor">#1c1c1c</Color>
+    <Color x:Key="DarkTheme_BackgroundColor">#1c1c1c</Color>
+    <Color x:Key="DarkTheme_TextColor">#c3dcde</Color>
+    <Color x:Key="DarkTheme_BorderAndBoxesColor">#c3dcde</Color>
+
+    <Color x:Key="DarkTheme_SecondaryColor">#9150e1</Color>
+    <Color x:Key="DarkTheme_SecondaryTextColor">#c3dcde</Color>
+    <Color x:Key="DarkTheme_SecondaryBackgroundColor">#1c1c1c</Color>
+    <Color x:Key="DarkTheme_SecondaryBorderAndBoxesColor">#c3dcde</Color>
+
+    <Color x:Key="DarkTheme_Additional_AccentColor">#9c27b0</Color>
+    <Color x:Key="DarkTheme_Additional_Hover_SelectedStatesOf_ButtonsColor">#ab47bc</Color>
+    <Color x:Key="DarkTheme_Additional_HighlightingBorderColor">#202020</Color>
+    <Color x:Key="DarkTheme_Additional_SuccessColor">#6435fc</Color>
+
+    <!-- Light Theme -->
+
+    <Color x:Key="LightTheme_PrimaryColor">#1c1c1c</Color>
+    <Color x:Key="LightTheme_BackgroundColor">#fff</Color>
+    <Color x:Key="LightTheme_TextColor">#c3dcde</Color>
+    <Color x:Key="LightTheme_BorderAndBoxesColor">#c3dcde</Color>
+
+    <Color x:Key="LightTheme_SecondaryColor">#9150e1</Color>
+    <Color x:Key="LightTheme_SecondaryTextColor">#1c1c1c</Color>
+    <Color x:Key="LightTheme_SecondaryBackgroundColor">#fff</Color>
+    <Color x:Key="LightTheme_SecondaryBorderAndBoxesColor">#1c1c1c</Color>
+
+    <Color x:Key="LightTheme_Additional_AccentColor">#cd5d58</Color>
+    <Color x:Key="LightTheme_Additional_Hover_SelectedStatesOf_ButtonsColor">#bc5c92</Color>
+    <Color x:Key="LightTheme_Additional_HighlightingColor">#1ec5df</Color>
+    <Color x:Key="LightTheme_Additional_ErrorMsgColor">#d94fa9</Color>
+    <Color x:Key="LightTheme_Additional_SuccessColor">#6435fc</Color>
+
+
+    <!-- Dark and Light App Theme -->
+    <Color x:Key="BackgroundDark">#121212</Color>
+    <Color x:Key="BackgroundLight">White</Color>
+
+    <Color x:Key="TextDark">White</Color>
+    <Color x:Key="TextLight">Black</Color>
+
+    <Color x:Key="TextDarkInsideBox">#353535</Color>
+    <Color x:Key="TextLightInsideBox">#353535</Color>
+
+    <Color x:Key="BackgroundDarkInsideBox">#36a18b</Color>
+    <Color x:Key="BackgroundLightInsideBox">LightGray</Color>
+
+    <Color x:Key="BorderDark">Transparent</Color>
+    <Color x:Key="BorderLight">Gray</Color>
+
+</ResourceDictionary>
