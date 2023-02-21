@@ -2,8 +2,8 @@ namespace ChatFlow;
 
 public partial class HistoryPage : ContentPage
 {
-    private static HistoryPage instance;
     private static HistoryCollection historyCollection;
+    private static HistoryPage instance; 
     private HistoryPage()
     {
         historyCollection = new HistoryCollection();

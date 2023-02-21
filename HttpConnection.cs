@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -9,6 +10,7 @@ namespace ChatFlow
 {
     public class HttpConnection : IConnection
     {
+        [Obsolete]
         public async Task<string> GetAsync(Uri uri)
         {
             var request = WebRequest.Create(uri) as HttpWebRequest;
@@ -17,7 +19,14 @@ namespace ChatFlow
             using var reader = new StreamReader(stream);
             return await reader.ReadToEndAsync();
         }
-
+        public async Task<string> GetAsyncNew(Uri uri)
+        {
+            var client = new HttpClient();
+            var req = await client.GetAsync(uri);
+            var resp = await req.Content.ReadAsStreamAsync();
+            using var read = new StreamReader(resp);
+            return await read.ReadToEndAsync();
+        }
         public async Task<string> PostAsync(Uri uri, string data, string contentType)
         {
             var request = WebRequest.Create(uri) as HttpWebRequest;

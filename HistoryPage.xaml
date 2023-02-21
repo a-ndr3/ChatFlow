@@ -10,7 +10,7 @@
 
     <VerticalStackLayout VerticalOptions="Start">
 
-        <ListView ItemsSource="historyCollection">
+        <ListView>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

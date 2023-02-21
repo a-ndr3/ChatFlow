@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatFlow.SetApiKeyPage"
+             Title="SetApiKeyPage"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{DynamicResource DarkTheme_BackgroundColor}"
+             >
+    <VerticalStackLayout VerticalOptions="Center">
+
+        <HorizontalStackLayout>
+            
+            <Label Text="Enter your API key:"
+                   TextColor="{DynamicResource DarkTheme_TextColor}"
+                   FontSize="15"
+                   FontFamily="CascadiaCode"
+                   >
+                
+            </Label>
+
+            <VerticalStackLayout HorizontalOptions="StartAndExpand">
+                <Border
+               Stroke="{DynamicResource DarkTheme_BorderAndBoxesColor}"
+        StrokeThickness="3.5"
+        Background="{DynamicResource DarkTheme_BackgroundColor}"
+        Margin="7,7"
+        HorizontalOptions="Start"
+                WidthRequest="200"
+                HeightRequest="120"
+                >
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="20,20,20,20"></RoundRectangle>
+                    </Border.StrokeShape>
+
+                    <Editor 
+                    BackgroundColor="{DynamicResource DarkTheme_BackgroundColor}"
+           TextColor="{DynamicResource DarkTheme_TextColor}"
+           FontFamily="CascadiaCode"
+           FontSize="13" 
+           Keyboard="Chat" FlowDirection="LeftToRight" HorizontalTextAlignment="Start" 
+                    IsTextPredictionEnabled="False" IsSpellCheckEnabled="False" 
+                    Placeholder="Your API here..."
+                    PlaceholderColor="{DynamicResource DarkTheme_TextColor}"
+                       />
+                </Border>
+            </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+
+        <Button
+                HorizontalOptions="StartAndExpand"
+            Margin="25,0,0,0"
+                WidthRequest="150"
+                BackgroundColor="{DynamicResource DarkTheme_BorderAndBoxesColor}"
+                FontFamily="CascadiaCode"
+                FontSize="14"
+                Text="Save"
+                TextColor="{DynamicResource DarkTheme_PrimaryColor}"
+                Clicked="SaveApiKeySetting_Clicked"
+                >
+
+        </Button>
+        
+    </VerticalStackLayout>
+
+
+</ContentPage>

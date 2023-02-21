@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-	<appSettings>
-		<add key="API-KEY" value="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" />
-		<add key="DefaultTheme" value="1" />
-	</appSettings>
-</configuration>
