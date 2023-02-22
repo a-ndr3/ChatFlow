@@ -16,7 +16,7 @@ public static class MauiProgram
 			{
 				fonts.AddFont("CascadiaCode.ttf", "CascadiaCode");
 			});
-        builder.Services.AddSingleton<ISettings>(new SettingsService(Preferences.Default));
+        //builder.Services.AddSingleton(new Settings.SettingsService(Preferences.Default));
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

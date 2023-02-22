@@ -10,7 +10,7 @@
     <VerticalStackLayout VerticalOptions="Start">
 
         <Frame HorizontalOptions="Center" BackgroundColor="Transparent">
-            <Image Source="Images/smallroundlogomainpage.png" Scale="0.6">
+            <Image Source="Images/maindark.png" Scale="1">
 
             </Image>
         </Frame>
@@ -37,9 +37,10 @@
             </Label>
         </HorizontalStackLayout>
 
-        <VerticalStackLayout HeightRequest="200"> </VerticalStackLayout>
-        
-        <Button VerticalOptions="End" 
+        <VerticalStackLayout HeightRequest="200"></VerticalStackLayout>
+
+        <VerticalStackLayout Spacing="30">
+            <Button VerticalOptions="End" 
                 HorizontalOptions="CenterAndExpand" 
                 WidthRequest="200"
                 BackgroundColor="{DynamicResource DarkTheme_BorderAndBoxesColor}"
@@ -50,9 +51,24 @@
                 Clicked="MainPageEnterButtonClicked"
                 >
 
-        </Button>
+            </Button>
+
+            <Button VerticalOptions="End" 
+                HorizontalOptions="CenterAndExpand" 
+                WidthRequest="200"
+                BackgroundColor="{DynamicResource DarkTheme_BorderAndBoxesColor}"
+                FontFamily="CascadiaCode"
+                FontSize="14"
+                Text="Settings"
+                TextColor="{DynamicResource DarkTheme_PrimaryColor}"
+                Clicked="SettingsButtonClicked"
+                >
+
+            </Button>
+
+        </VerticalStackLayout>
 
     </VerticalStackLayout>
-    
+
 
 </ContentPage>

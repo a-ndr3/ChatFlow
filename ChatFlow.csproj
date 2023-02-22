@@ -10,7 +10,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>ChatFlow</ApplicationTitle>
+		<ApplicationTitle>chatflow</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.chatflow</ApplicationId>
@@ -33,7 +33,7 @@
 		<!-- App Icon -->
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splashlogo.svg" Color="#ffffff" BaseSize="500,500" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#ffffff" BaseSize="300,200" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -49,7 +49,7 @@
 	  <None Remove="Platforms\Android\Resources\mipmap\appicon.png" />
 	  <None Remove="Platforms\Android\Resources\mipmap\appicon_round.png" />
 	  <None Remove="Resources\Fonts\CascadiaCode.ttf" />
-	  <None Remove="Resources\Images\smallroundlogomainpage.png" />
+	  <None Remove="Resources\Images\maindark.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -72,6 +72,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="SetApiKeyPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Settings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

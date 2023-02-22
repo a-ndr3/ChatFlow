@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatFlow.Settings"
+             xmlns:vm="clr-namespace:ChatFlow"
+             Title="Settings"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{DynamicResource DarkTheme_BackgroundColor}">
+
+    <VerticalStackLayout HorizontalOptions="Center">
+
+        <VerticalStackLayout HorizontalOptions="Center" Spacing="10" Margin="0,5,0,0">
+
+            <Label   
+            Text="Your API key"
+            TextColor="{DynamicResource DarkTheme_TextColor}"   
+                FontSize="15" 
+                FontFamily="CascadiaCode"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Border Margin="0,5,0,0"
+        Stroke="{DynamicResource DarkTheme_BorderAndBoxesColor}"
+        StrokeThickness="3.5"
+        Background="{DynamicResource DarkTheme_BackgroundColor}"
+        HorizontalOptions="Start"
+                WidthRequest="350"
+                HeightRequest="50"
+                >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20,20,20,20"></RoundRectangle>
+                </Border.StrokeShape>
+
+                <Editor x:Name="apiField"
+                    BackgroundColor="{DynamicResource DarkTheme_BackgroundColor}"
+           TextColor="{DynamicResource DarkTheme_TextColor}"
+           FontFamily="CascadiaCode"
+           FontSize="13"
+           Keyboard="Chat" FlowDirection="LeftToRight" HorizontalTextAlignment="Start" 
+                    Placeholder="{Binding Api}" Margin="1,0,0,0"
+                    PlaceholderColor="{DynamicResource DarkTheme_TextColor}" IsEnabled="False" IsReadOnly="True"
+                       />
+            </Border>
+
+            <Button VerticalOptions="End" 
+                HorizontalOptions="CenterAndExpand" 
+                WidthRequest="200"
+                BackgroundColor="{DynamicResource DarkTheme_BorderAndBoxesColor}"
+                FontFamily="CascadiaCode"
+                FontSize="14"
+                Text="Set new key"
+                TextColor="{DynamicResource DarkTheme_PrimaryColor}"
+                Clicked="SetNewKey_Clicked"
+                >
+
+            </Button>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout HeightRequest="100"></VerticalStackLayout>
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Margin="0,0,0,0">
+
+            <Label Text="Dark theme"
+                   TextColor="{DynamicResource DarkTheme_TextColor}"
+                   FontFamily="CascadiaCode"
+                   FontSize="18"
+                   HorizontalOptions="Start"
+                   Grid.Column="0" Grid.Row="0"
+                   >
+
+            </Label>
+
+            <Switch x:Name="themeSwitch" HorizontalOptions="End" Scale="1.3"               
+                ThumbColor="{DynamicResource DarkTheme_BorderAndBoxesColor}" 
+                BackgroundColor="Transparent"
+                BindingContext="{Binding DefaultTheme}"
+                IsToggled="True"
+                Grid.Column="1" Grid.Row="0"
+                Toggled="SwitchedToAnotherTheme_Clicked"
+                OnColor="{DynamicResource DarkTheme_Additional_Hover_SelectedStatesOf_ButtonsColor}"
+                 />
+
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>

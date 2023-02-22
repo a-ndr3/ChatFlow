@@ -3,8 +3,8 @@ namespace ChatFlow;
 public partial class MenuPage : ContentPage
 {
 	static MenuPage instance;
-    ISettings settings = DependencyService.Get<ISettings>();
-	private MenuPage()
+    static Settings settings = Settings.GetInstance();
+    private MenuPage()
 	{
 		InitializeComponent();
 	}
@@ -21,6 +21,7 @@ public partial class MenuPage : ContentPage
 
     private async void OpenHistory_Clicked(object sender, EventArgs e)
     {
+        //var settings = DependencyService.Get<Settings.ISettings>();
         IConnection connection = new HttpConnection();
         IChatGPT chat = new ChatGPT3(new HttpClient(),settings.Api,Endpoints.History);
         Dictionary<string, string[]> chatHistory = new Dictionary<string, string[]>();

@@ -2,15 +2,15 @@
 
 public partial class MainPage : ContentPage
 {
-    ISettings settings;
-    //TODO change splash pic
+    //IServiceCollection _services;
+    Settings settings = Settings.GetInstance();
     public MainPage()
-    {
-        settings = DependencyService.Get<ISettings>();
+   {      
         InitializeComponent();
     }
     private void MainPageEnterButtonClicked(object sender, EventArgs e)
     {
+        //var settings = DependencyService.Get<Settings.ISettings>();
         try
         {
             if (settings.Api == null || settings.Api == "")
@@ -23,7 +23,8 @@ public partial class MainPage : ContentPage
                 var menuPage = MenuPage.GetInstance();
                 Navigation.PushAsync(menuPage);
             }
-            
+            //TODO splash screen loading animation of symbols c->h->a->t 
+
             //TODO check if the user has api key and if not, redirect to the set api page
 
             //TODO if the user has api key, redirect to the menu page
@@ -46,6 +47,12 @@ public partial class MainPage : ContentPage
             });
         }
 
+    }
+
+    private void SettingsButtonClicked(object sender, EventArgs e) 
+    {
+        var settingsPage = Settings.GetInstance();
+        Navigation.PushAsync(settingsPage);
     }
 }
 
